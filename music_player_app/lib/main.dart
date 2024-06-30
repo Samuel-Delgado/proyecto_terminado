@@ -6,8 +6,6 @@ import 'package:provider/provider.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize your necessary plugins or services here
-
   runApp(
     ChangeNotifierProvider(
       create: (context) => AudioProvider(),
@@ -26,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
         brightness: Brightness.dark, // Tema oscuro
         appBarTheme: AppBarTheme(
-          centerTitle: true, // Centra el título en la AppBar
+          centerTitle: true,
         ),
       ),
       home: SongListScreen(),
@@ -44,7 +42,7 @@ class PlayerScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Reproductor de Música',
-          style: TextStyle(color: Colors.white), // Texto blanco
+          style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.black,
         elevation: 0,
@@ -59,7 +57,6 @@ class PlayerScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // Contenido de la pantalla del reproductor
         ],
       ),
     );

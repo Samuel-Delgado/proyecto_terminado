@@ -33,15 +33,14 @@ class PlayerScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Album cover placeholder or image
                 Container(
                   width: 200,
                   height: 200,
                   decoration: BoxDecoration(
-                    color: Colors.grey[300], // Placeholder color
+                    color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  // Replace with actual album cover image widget
+
                   child: Center(
                     child: Icon(
                       Icons.music_note,
@@ -60,7 +59,6 @@ class PlayerScreen extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontSize: 24),
                 ),
                 SizedBox(height: 8),
-                // Artist name
                 Text(
                   audioProvider.canciones.isNotEmpty
                       ? audioProvider
@@ -71,7 +69,6 @@ class PlayerScreen extends StatelessWidget {
                       color: Colors.white.withOpacity(0.6), fontSize: 16),
                 ),
                 SizedBox(height: 20),
-                // Progress bar with time indicators
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Column(
@@ -114,7 +111,7 @@ class PlayerScreen extends StatelessWidget {
                 icon: Icon(Icons.skip_previous, size: 48, color: Colors.white),
                 onPressed: audioProvider.previousSong,
               ),
-              SizedBox(width: 32), // Espacio entre botones
+              SizedBox(width: 32),
               IconButton(
                 icon: Icon(
                   audioProvider.isPlaying
@@ -125,7 +122,7 @@ class PlayerScreen extends StatelessWidget {
                 ),
                 onPressed: audioProvider.playPause,
               ),
-              SizedBox(width: 32), // Espacio entre botones
+              SizedBox(width: 32),
               IconButton(
                 icon: Icon(Icons.skip_next, size: 48, color: Colors.white),
                 onPressed: audioProvider.nextSong,

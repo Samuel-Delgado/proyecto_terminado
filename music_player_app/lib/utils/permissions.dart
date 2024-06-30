@@ -25,7 +25,6 @@ class Permissions {
         }
         return status.isGranted;
       } else {
-        // Solicitar permiso de almacenamiento para versiones anteriores a Android 10
         var status = await Permission.storage.status;
         if (!status.isGranted) {
           status = await Permission.storage.request();
@@ -33,7 +32,6 @@ class Permissions {
         return status.isGranted;
       }
     } else {
-      // No es Android, devolver verdadero o manejar según sea necesario
       return true;
     }
   }

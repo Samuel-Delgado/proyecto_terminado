@@ -113,9 +113,7 @@ class _SongListScreenState extends State<SongListScreen> {
   }
 
   String? _getAlbumArtwork(SongModel song) {
-    // Implement your logic to get album artwork here
-    return null; // Return null if artwork is not available
-  }
+    return null;
 
   Widget _buildBottomBar() {
     final audioProvider = Provider.of<AudioProvider>(context);
@@ -162,7 +160,7 @@ class _SongListScreenState extends State<SongListScreen> {
         ),
       );
     } else {
-      return SizedBox.shrink(); // Hide bottom bar if no song is loaded
+      return SizedBox.shrink();
     }
   }
 }
